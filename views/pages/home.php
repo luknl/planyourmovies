@@ -25,15 +25,15 @@
 <!-- </?for(($result->page=1);($result->page)<($result->total_pages);($result->page++)){?>
    <p>Page : </?echo($result->page)?></p> -->
 
-   <p><?php echo(strftime("%V"));?></p>
 
 <div class="main-content">
-   <div class="week-date">
+   <div class="today">
+   <div class="week">
+      <div class="week-date">
       <div class="date">
-         <h2>CETTE SEMAINE</h2>
+         <h2>Semaine du <?php echo(strftime("%V"));?></h2>
       </div>
    </div>
-   <div class="week">
       <div class="owl-carousel">
          <?foreach($result->results as $movie) {?>
       <div class="item">
@@ -50,22 +50,57 @@
 
    </div>
    </div>
-
-<div class="week">
-<div class="owl-carousel">
-         <?foreach($result2->results as $movie2) {?>
+   </div>
+    <div class="populaire">
+   <div class="week">
+      <div class="week-date">
+      <div class="date">
+         <h2>Semaine du <?php echo(strftime("%V"));?></h2>
+      </div>
+   </div>
+      <div class="owl-carousel">
+         <?foreach($result->results as $movie) {?>
       <div class="item">
-         <?php if(empty($movie2->poster_path)): ?>
-            <div class="alternative-image"><? echo($movie2->original_title);?></div>
+         <?php if(empty($movie->poster_path)): ?>
+            <div class="alternative-image"><? echo($movie->original_title);?></div>
          <?php else: ?>
-            <img style=" position: relative; z-index: 2;"src="http://image.tmdb.org/t/p/w500<?echo($movie2->poster_path);?>" alt="<? echo($movie2->original_title);?> movie poster"/>
+            <a href="<?= URL ?>movie?id=<? echo($movie->id) ?>">
+               <img style=" position: relative; z-index: 2;"src="http://image.tmdb.org/t/p/w500<?echo($movie->poster_path);?>" alt="<? echo($movie->original_title);?> movie poster"/>
+            </a>
          <?php endif; ?>
       </div>
       <?
 }?>
 
    </div>
-</div>
+   </div>
+   </div>
+   <div class="discover">
+   <div class="week">
+      <div class="week-date">
+      <div class="date">
+         <h2>Semaine du <?php echo(strftime("%V"));?></h2>
+      </div>
+   </div>
+      <div class="owl-carousel">
+         <?foreach($result->results as $movie) {?>
+      <div class="item">
+         <?php if(empty($movie->poster_path)): ?>
+            <div class="alternative-image"><? echo($movie->original_title);?></div>
+         <?php else: ?>
+            <a href="<?= URL ?>movie?id=<? echo($movie->id) ?>">
+               <img style=" position: relative; z-index: 2;"src="http://image.tmdb.org/t/p/w500<?echo($movie->poster_path);?>" alt="<? echo($movie->original_title);?> movie poster"/>
+            </a>
+         <?php endif; ?>
+      </div>
+      <?
+}?>
+
+   </div>
+   </div>
+   </div>
+
+
 
 
 </div>
