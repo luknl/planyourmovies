@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="3" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" filter="url(#filter-1)">
+        <g id="Next" transform="translate(2.000000, 1.000000)">
+            <circle class="next-circle" id="Oval-1" stroke="#44B482" stroke-width="2" fill="#62E8AD" cx="26.5" cy="26.5" r="26.5"></circle>
+            <path d="M37.74925,18.4347826 C37.0458478,18.4347826 36.4887717,19.0028043 36.4887717,19.7062065 L36.4887717,25.5269891 L25.4365435,18.6801957 C24.5971848,18.132337 23.9122174,18.5338696 23.9122174,19.5800435 L23.9122174,25.4146522 L13.0460652,18.6813478 C12.2067065,18.1334891 11.5217391,18.5350217 11.5217391,19.5811957 L11.5217391,33.4193804 C11.5217391,34.46325 12.2061304,34.8699674 13.0460652,34.3192283 L23.9122174,27.5859239 L23.9122174,33.4205326 C23.9122174,34.4644022 24.5966087,34.8711196 25.4365435,34.3203804 L36.4887717,27.474163 L36.4887717,33.2949457 C36.4887717,34.0000761 37.0527609,34.5652174 37.74925,34.5652174 L40.2390978,34.5652174 C40.9413478,34.5652174 41.5013043,34.0000761 41.5013043,33.2949457 L41.5013043,19.7079348 C41.5064891,19.0045326 40.9413478,18.4347826 40.2390978,18.4347826 L37.74925,18.4347826 Z" id="Shape" fill="#44B483" class="next-circle"></path>
+        </g>
+    </g>
+</svg>
