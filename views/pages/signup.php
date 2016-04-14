@@ -13,80 +13,72 @@
 
 		   <?include 'views/partials/header.php';?>
 
-<div class="contain">
+<div class="container">
 
+
+	<form action="#" method="post" class="signup-contain">
 	<h1>Inscription</h1>
 
 	<a href="<?= URL ?>login">Login</a>
 
-	<form action="#" method="post">
-
 		<div>
-			<input type="email" name="email" placeholder="Email">
+			<input type="email" name="email" placeholder="Email" class="email">
 		</div>
 
 		<div>
-			<input type="password" name="password" placeholder="Mot de passe">
+			<input type="password" name="password" placeholder="Mot de passe" class="password">
 		</div>
 
 		<div>
-			<input type="password" name="confirm" placeholder="Retapez votre mot de passe">
+			<input type="password" name="confirm" placeholder="Retapez votre mot de passe" class="password">
 		</div>
 
-		 <div> Aidez-nous à vous proposer une expérience qui vous ressemble ! </div>
 
 		<div> Avez-vous une préférence entre : </div>
+			<br>
+		<div class="preference">
+				<input type="radio" name="language" id="language" value="VO" <?= $language == 'VO' ? 'checked' : '' ?> ><label for="language"> VO</label>
 
-		<div>
-			<label>
-				<input type="radio" name="language" value="VO" <?= $language == 'VO' ? 'checked' : '' ?> >
-					VO
-			</label>
-			<label>
-				<input type="radio" name="language" value="VF" <?= $language == 'VF' ? 'checked' : '' ?> >
-					VF
-			</label>
-			<label>
-				<input type="radio" name="language" value="none" <?= $language == 'none' ? 'checked' : '' ?> >
-					Peu m'importe
-			</label>
+				<input type="radio" name="language" id="language2" value="VF" <?= $language == 'VF' ? 'checked' : '' ?> class="bou">
+					<label for="language2"> VF</label>
+
+
+				<input type="radio" name="language" id="language3" value="none" <?= $language == 'none' ? 'checked' : '' ?> class="bou">
+					<label for="language3"> Peu m'importe</label>
+
 		</div>
-		<div>
-			<label>
-				<input type="radio" name="type" value="3D" <?= $type == '3D' ? 'checked' : '' ?> >
-					3D
-			</label>
-			<label>
-				<input type="radio" name="type" value="Numerique" <?= $type == 'Numerique' ? 'checked' : '' ?> >
-					Numérique
-			</label>
-			<label>
-				<input type="radio" name="type" value="none" <?= $type == 'none' ? 'checked' : '' ?> >
-					Peu m'importe
-			</label>
+		<div class="preference">
+
+				<input type="radio" name="type" for="type" value="3D" <?= $type == '3D' ? 'checked' : '' ?> ><label for="type"> 3D</label>
+
+
+
+				<input type="radio" name="type" id="type1" value="Numerique" <?= $type == 'Numerique' ? 'checked' : '' ?> ><label for="type1"> Numérique</label>
+
+
+				<input type="radio" name="type" id="type2" value="none" <?= $type == 'none' ? 'checked' : '' ?> ><label for="type2"> Peu m'importe</label>
+
+
 		</div>
 
-		<div>
-			<label>
-				<input type="radio" name="cinemas" value="UGC" <?= $cinemas == 'UGC' ? 'checked' : '' ?> >
-					UGC
-			</label>
-			<label>
-				<input type="radio" name="cinemas" value="Gaumont" <?= $cinemas == 'Gaumont' ? 'checked' : '' ?> >
-					Gaumont
-			</label>
-			<label>
-				<input type="radio" name="cinemas" value="Autres" <?= $cinemas == 'Autres' ? 'checked' : '' ?> >
-					Autres
-			</label>
-			<label>
-				<input type="radio" name="cinemas" value="none" <?= $cinemas == 'none' ? 'checked' : '' ?> >
-					Peu m'importe
-			</label>
+		<div class="preference">
+
+				<input type="radio" name="cinemas" id="cinemas" value="UGC" <?= $cinemas == 'UGC' ? 'checked' : '' ?> ><label for="cinemas"> UGC</label>
+
+
+				<input type="radio" name="cinemas" id="cinemas1" value="Gaumont" <?= $cinemas == 'Gaumont' ? 'checked' : '' ?> ><label for="cinemas1"> Gaumont</label>
+
+
+				<input type="radio" name="cinemas" id="cinemas2" value="Autres" <?= $cinemas == 'Autres' ? 'checked' : '' ?> ><label for="cinemas2"> Autres</label>
+
+
+				<input type="radio" name="cinemas" id="cinemas3" value="none" <?= $cinemas == 'none' ? 'checked' : '' ?> ><label for="cinemas3"> Peu m'importe</label>
+
+
 		</div>
 
 		<div>
-			<input type="submit">
+			<input type="submit" class="submit">
 		</div>
 
 	</form>

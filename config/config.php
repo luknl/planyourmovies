@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 	session_start();
 
    define('URL','http://localhost:8888/hetic/planyourmovies/');

@@ -15,15 +15,19 @@
    	$result = file_get_contents('https://api.themoviedb.org/3/movie/'.$movie_id.'?api_key=f6dfa935f34f869f08db46fb66e4e8d1');
    	$result = json_decode($result);
 
+      $minutes = $result->runtime;
+$d = floor ($minutes / 1440);
+$h = floor (($minutes - $d * 1440) / 60);
+$m = $minutes - ($d * 1440) - ($h * 60);
+
    ?>
+<div class="container-movie">
 
-<h2><a href="<? echo($result->homepage);?>"><? echo($result->original_title);?></a></h2>
+<img src="http://image.tmdb.org/t/p/w500<?echo($result->poster_path);?>" title="<? echo($result->original_title);?> movie poster"/ width="200px">
 
-<img src="http://image.tmdb.org/t/p/w500<?echo($result->poster_path);?>" title="<? echo($result->original_title);?> movie poster"/ alt="<? echo($movie->title);?> movie poster" width="200px"/>
-<br>
-<br>
+<div class="movie-info">
+<h2><? echo($result->original_title);?></h2>
 
-<i><?echo($result->overview);?></i>
 
 <p><strong>Genre : </strong><?echo($result->genres[0]->name);?></p>
 
@@ -32,6 +36,28 @@
 <p><strong>Released year : </strong><?$date = date_create($result->release_date);
 echo date_format($date, 'Y');?></p>
 
+<?
+
+         require_once('config/simple_html_dom.php');
+
+         $curl = curl_init();
+         curl_setopt($curl, CURLOPT_URL, 'http://www.imdb.com/title/'.$result->imdb_id.'/');
+         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);
+         $str = curl_exec($curl);
+         curl_close($curl);
+
+         $html = str_get_html($str);?>
+
+            <p><strong>Réalisateur : </strong><?echo ($html->find('span .itemprop',0)->innertext);?></p>
+
+            <p><strong>Durée : </strong><?echo "{$h}h {$m}m";?></p>
+
+         <p class="resume"><?echo($result->overview);?></p>
+
+         <a href= <?= 'http://www.imdb.com/title/'.$result->imdb_id.'/' ?> >IMDE</a>
+   </div>
+</div>
 
 <?include 'views/partials/footer.php';?>
 

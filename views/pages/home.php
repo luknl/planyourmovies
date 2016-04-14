@@ -3,6 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <?include_once 'config/config.php';?>
       <title><?= $title?></title>
       <link rel="stylesheet" href="<?= URL ?>src/css/reset.css">
       <link rel="stylesheet" href="<?= URL ?>src/css/owl.carousel.css">
@@ -16,6 +17,9 @@
    $result = file_get_contents('https://api.themoviedb.org/3/movie/upcoming?api_key=f6dfa935f34f869f08db46fb66e4e8d1');
    $result = json_decode($result);
 
+   $result2 = file_get_contents('https://api.themoviedb.org/3/discover/movie/?api_key=f6dfa935f34f869f08db46fb66e4e8d1');
+   $result2 = json_decode($result2);
+
 ?>
 
 <!-- </?for(($result->page=1);($result->page)<($result->total_pages);($result->page++)){?>
@@ -23,71 +27,44 @@
 
    <p><?php echo(strftime("%V"));?></p>
 
-   <div class="main-content">
-<div class="Week">
-<div class="left-content">
-<div class="time-img">
-   <img src="src/img/time.svg" alt="">
-</div>
-<h1>27</h1>
-<h1>MAI</h1>
-</div>
-<div class="owl-carousel">
-   <?foreach($result->results as $movie) {?>
+<div class="main-content">
+   <div class="week-date">
+      <div class="date">
+         <h2>CETTE SEMAINE</h2>
+      </div>
+   </div>
+   <div class="week">
+      <div class="owl-carousel">
+         <?foreach($result->results as $movie) {?>
       <div class="item">
          <?php if(empty($movie->poster_path)): ?>
             <div class="alternative-image"><? echo($movie->original_title);?></div>
          <?php else: ?>
-            <img style=" position: relative; z-index: 2;"src="http://image.tmdb.org/t/p/w500<?echo($movie->poster_path);?>" alt="<? echo($movie->original_title);?> movie poster" title="<? echo($movie->title);?> movie poster"/>
+            <a href="<?= URL ?>movie?id=<? echo($movie->id) ?>">
+               <img style=" position: relative; z-index: 2;"src="http://image.tmdb.org/t/p/w500<?echo($movie->poster_path);?>" alt="<? echo($movie->original_title);?> movie poster"/>
+            </a>
          <?php endif; ?>
       </div>
       <?
 }?>
 
-</div>
+   </div>
+   </div>
 
-</div>
-<div class="Week">
-<div class="left-content">
-<div class="time-img">
-   <img src="src/img/time.svg" alt="">
-</div>
-<h1>27</h1>
-<h1>MAI</h1>
-</div>
+<div class="week">
 <div class="owl-carousel">
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-</div>
-</div>
-<div class="Week">
-<div class="left-content">
-<div class="time-img">
-   <img src="src/img/time.svg" alt="">
-</div>
-<h1>27</h1>
-<h1>MAI</h1>
-</div>
-<div class="owl-carousel">
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-   <div class="item"><img src="src/img/dead.jpg" alt=""></div>
-</div>
+         <?foreach($result2->results as $movie2) {?>
+      <div class="item">
+         <?php if(empty($movie2->poster_path)): ?>
+            <div class="alternative-image"><? echo($movie2->original_title);?></div>
+         <?php else: ?>
+            <img style=" position: relative; z-index: 2;"src="http://image.tmdb.org/t/p/w500<?echo($movie2->poster_path);?>" alt="<? echo($movie2->original_title);?> movie poster"/>
+         <?php endif; ?>
+      </div>
+      <?
+}?>
+
+   </div>
 </div>
 
 

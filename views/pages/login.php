@@ -94,29 +94,29 @@
 
 		   <?include 'views/partials/header.php';?>
 
-<div class="contain">
+<div class="container">
 
 	<h1>Login</h1>
 	<a href="<?= URL ?>signup">Inscription</a>
 
-	<form action="#" method="post">
+	<form action="#" method="post" class="signup-contain">
 
 		<div>
-			<input type="email" name="email" placeholder="Email">
+			<input type="email" name="email" placeholder="Email" class="email">
 		</div>
 		<div>
-			<input type="password" name="password" placeholder="Mot de passe">
+			<input type="password" name="password" placeholder="Mot de passe" class="password">
 		</div>
 
 		<!-- if cookie had worked
 
 		<div>
 			<input type="checkbox" name="remember"> Se souvenir de moi
-		</div> 
+		</div>
 
 		-->
 		<div>
-			<input type="submit" value="Se connecter">
+			<input type="submit" value="Se connecter" class="submit">
 		</div>
 
 	</form>
