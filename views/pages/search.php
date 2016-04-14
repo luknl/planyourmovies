@@ -25,6 +25,7 @@
   <?php }
 
    include 'views/partials/footer.php';?>
-
+   <script src="<?= URL ?>src/js/libs/jquery-2.2.0.min.js"></script>
+   <script src="<?= URL ?>src/js/app/script.js"></script>
 </body>
 </html>

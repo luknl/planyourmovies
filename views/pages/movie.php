@@ -55,12 +55,15 @@ echo date_format($date, 'Y');?></p>
             <p><strong>Durée : </strong><?echo "{$h}h {$m}m";?></p>
 
          <p class="resume"><?echo($result->overview);?></p>
+         <a href= <?= 'http://www.imdb.com/title/'.$result->imdb_id.'/' ?> >
+         <div class="button">En savoir plus</div></a><
 
-         <a href= <?= 'http://www.imdb.com/title/'.$result->imdb_id.'/' ?> >IMDE</a>
    </div>
 </div>
 
 <?include 'views/partials/footer.php';?>
+<script src="<?= URL ?>src/js/libs/jquery-2.2.0.min.js"></script>
+   <script src="<?= URL ?>src/js/app/script.js"></script>
 
 </body>
 </html>

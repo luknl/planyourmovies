@@ -113,6 +113,42 @@
 	<script src="<?= URL ?>src/js/libs/dynamics.js"></script>
 	<script src="<?= URL ?>src/js/libs/jquery.clickout.js"></script>
 	<script src="<?= URL ?>src/js/app/script.js"></script>
+   <script>
+      $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+
+    nav:true,
+    responsive:{
+        0:{
+            items:1,
+            margin:-250
+        },
+        370:{
+            items:2,
+            margin:-270
+        },
+        470:{
+            items:2,
+            margin:-260
+        },
+        768:{
+            items:2,
+            margin:-260
+        },
+        1024:{
+            items:4
+        },
+        1440:{
+            items:6
+        }
+
+    }
+});
+   </script>
 
 </body>
 </html>
