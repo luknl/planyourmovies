@@ -25,13 +25,3 @@
 	</div> -->
 </div>
 
-
-
-<nav>
-   <a href="<?= URL ?>">Home</a>
-   <a href="<?= URL ?>movie">Movie</a>
-   <a href="<?= URL ?>about">About</a>
-   <a href="<?= URL ?>about2">About2</a>
-   <a href="<?= URL ?>planning">Planning</a>
-   <a href="<?= URL ?>news">News</a>
-</nav>
