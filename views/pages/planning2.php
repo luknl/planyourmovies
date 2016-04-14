@@ -18,26 +18,9 @@ $events = $req->fetchAll();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Planning</title>
-
-    <!-- Bootstrap Core CSS -->
+    <title>Planning 2</title>
     <link href="<?= URL ?>/calendar2/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?= URL ?>/calendar2/css/fullcalendar.css" rel="stylesheet" />
-
-
-   <!-- /.container -->
-
-   <!-- jQuery Version 1.11.1 -->
-   <script src="<?= URL ?>/calendar2/js/jquery.js"></script>
-
-   <!-- Bootstrap Core JavaScript -->
-   <script src="<?= URL ?>/calendar2/js/bootstrap.min.js"></script>
-
-   <!-- FullCalendar -->
-   <script src="<?= URL ?>/calendar2/js/moment.min.js"></script>
-   <script src="<?= URL ?>/calendar2/js/fullcalendar.min.js"></script>
-   <script src="<?= URL ?>/calendar2/js/jquery-ui.custom.min.js"></script>
-    <!-- Custom CSS -->
     <style>
     body {
         padding-top: 70px;
@@ -188,28 +171,22 @@ $events = $req->fetchAll();
 
     </div>
 
-	<script>
+
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="<?= URL ?>/calendar2/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<?= URL ?>/calendar2/js/bootstrap.min.js"></script>
+
+    <!-- FullCalendar -->
+    <script src="<?= URL ?>/calendar2/js/moment.min.js"></script>
+    <script src="<?= URL ?>/calendar2/js/fullcalendar.min.js"></script>
+
+
+    <script>
 
 	$(document).ready(function() {
-
-
-      		$('#external-events .fc-event').each(function() {
-
-      			// store data so the calendar knows to render an event upon drop
-      			$(this).data('event', {
-      				title: $.trim($(this).text()), // use the element's text as the event title
-      				stick: true // maintain when user navigates (see docs on the renderEvent method)
-      			});
-
-      			// make the event draggable using jQuery UI
-      			$(this).draggable({
-      				zIndex: 999,
-      				revert: true,      // will cause the event to go back to its
-      				revertDuration: 0  //  original position after the drag
-      			});
-
-      		});
-
 
 		$('#calendar').fullCalendar({
 			header: {
@@ -217,37 +194,11 @@ $events = $req->fetchAll();
 				center: 'title',
 				right: 'month,basicWeek,basicDay'
 			},
-         lang: 'fr',
-         editable: true,
-         droppable: true, // this allows things to be dropped onto the calendar
-         dragRevertDuration: 0,
-         defaultDate: '2016-01-12',
+			defaultDate: '2016-01-12',
+			editable: true,
 			eventLimit: true, // allow "more" link when too many events
 			selectable: true,
 			selectHelper: true,
-         drop: function() {
-         console.log("yo");
-             // is the "remove after drop" checkbox checked?
-             if ($('#drop-remove').is(':checked')) {
-                 // if so, remove the element from the "Draggable Events" list
-                 $(this).remove();
-             }
-         },
-         eventDragStop: function( event, jsEvent, ui, view ) {
-
-             if(isEventOverDiv(jsEvent.clientX, jsEvent.clientY)) {
-                 $('#calendar').fullCalendar('removeEvents', event._id);
-                 var el = $( "<div class='fc-event'>" ).appendTo( '#external-events-listing' ).text( event.title );
-                 el.draggable({
-                   zIndex: 999,
-                   revert: true,
-                   revertDuration: 0
-                 });
-                 el.data('event', { title: event.title, id :event.id, stick: true });
-                 console.log(event.title);
-                 console.log(event.id);
-             }
-         },
 			select: function(start, end) {
 
 				$('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));

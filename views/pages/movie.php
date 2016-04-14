@@ -1,26 +1,27 @@
+<?
+$movie_id = $_GET['id'];
+
+$result = file_get_contents('https://api.themoviedb.org/3/movie/'.$movie_id.'?api_key=f6dfa935f34f869f08db46fb66e4e8d1');
+$result = json_decode($result);
+
+$minutes = $result->runtime;
+$d = floor ($minutes / 1440);
+$h = floor (($minutes - $d * 1440) / 60);
+$m = $minutes - ($d * 1440) - ($h * 60);
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
       <meta charset="utf-8">
-      <title><?= $title?></title>
+      <title><?= $result->original_title?></title>
       <link rel="stylesheet" href="<?= URL ?>src/css/style.css">
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
    </head>
    <body>
 
-   <?include 'views/partials/header.php';
+   <?include 'views/partials/header.php';?>
 
-      $movie_id = $_GET['id'];
-
-   	$result = file_get_contents('https://api.themoviedb.org/3/movie/'.$movie_id.'?api_key=f6dfa935f34f869f08db46fb66e4e8d1');
-   	$result = json_decode($result);
-
-      $minutes = $result->runtime;
-$d = floor ($minutes / 1440);
-$h = floor (($minutes - $d * 1440) / 60);
-$m = $minutes - ($d * 1440) - ($h * 60);
-
-   ?>
 <div class="container-movie">
 
 <img src="http://image.tmdb.org/t/p/w500<?echo($result->poster_path);?>" title="<? echo($result->original_title);?> movie poster"/ width="200px">
