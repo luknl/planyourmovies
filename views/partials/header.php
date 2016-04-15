@@ -15,16 +15,6 @@
 		<input type="search" name="the_search" placeholder="Search...">
 	</form>
 	</div>
-
-
-	<!-- <div class="menu">
-		<h2>Profil</h2>
-		<ul class="menu-ul">
-			<li class="menu-li">fezfezf</li>
-			<li class="menu-li">fezfezf</li>
-			<li class="menu-li">fezfezf</li>
-		</ul>
-	</div> -->
 </div>
 <div class="left-bar">
    <ul>
@@ -33,4 +23,3 @@
       <a href="<?= URL?>planning"><li>Calendrier</li></a>
    </ul>
 </div>
-

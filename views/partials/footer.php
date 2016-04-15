@@ -1,6 +1,8 @@
 <footer>
 	<ul class="footer-left">
-		<li><a href="">Mention Légales</a></li>	</ul>
+			<li><p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p></li>
+			<li><img src="<?= URL?>src/img/attribution.png" width="200px"/></li>
+	</ul>
 	<ul class="footer-center">
 		<li><a href="">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512px" height="512px" viewBox="0 0 16 16">

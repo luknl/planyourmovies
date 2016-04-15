@@ -25,14 +25,11 @@
 
 ?>
 
-<!-- </?for(($result->page=1);($result->page)<($result->total_pages);($result->page++)){?>
-   <p>Page : </?echo($result->page)?></p> -->
-
 
 <div class="main-content">
 
    <div class="today">
-   
+
    <div class="week">
       <div class="week-date">
       <div class="date">

@@ -13,9 +13,6 @@ else if($q == 'movie')
 else if($q == 'about')
    $page = 'about';
 
-else if($q == 'about2')
-   $page = 'about2';
-
 else if($q == 'signup')
    $page = 'signup';
 
@@ -30,9 +27,6 @@ else if($q == 'profile')
 
 else if($q == 'planning')
    $page = 'planning';
-
-else if($q == 'planning2')
-   $page = 'planning2';
 
 else if($q == 'search')
    $page = 'search';

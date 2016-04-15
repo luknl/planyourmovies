@@ -1,5 +1,5 @@
 <?php
-require_once('calendar2/bdd.php');
+require_once('calendar/bdd.php');
 
 $sql = "SELECT id, title, start, end, color FROM events ";
 
@@ -17,8 +17,8 @@ $events = $req->fetchAll();
 			<title><?= $title?></title>
 			<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 			<link rel="stylesheet" href="<?= URL ?>src/css/calendar.css">
-         <link href="<?= URL ?>calendar2/css/bootstrap.min.css" rel="stylesheet">
-     	<link href="<?= URL ?>calendar2/css/fullcalendar.css" rel="stylesheet" />
+         <link href="<?= URL ?>calendar/css/bootstrap.min.css" rel="stylesheet">
+     	<link href="<?= URL ?>calendar/css/fullcalendar.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -52,7 +52,7 @@ $events = $req->fetchAll();
 		<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<form class="form-horizontal" method="POST" action="calendar2/addEvent.php">
+			<form class="form-horizontal" method="POST" action="calendar/addEvent.php">
 
 			  <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -111,7 +111,7 @@ $events = $req->fetchAll();
 		<div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<form class="form-horizontal" method="POST" action="calendar2/editEventTitle.php">
+			<form class="form-horizontal" method="POST" action="calendar/editEventTitle.php">
 			  <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="myModalLabel">Edit Event</h4>
@@ -161,20 +161,14 @@ $events = $req->fetchAll();
 		  </div>
 		</div>
 
-		<!-- <div style='clear:both'></div> -->
-
 	</div>
 
-   <script src="<?= URL ?>calendar2/js/jquery.js"></script>
-
-   <!-- Bootstrap Core JavaScript -->
-   <script src="<?= URL ?>calendar2/js/bootstrap.min.js"></script>
-
-   <!-- FullCalendar -->
-   <script src="<?= URL ?>calendar2/js/moment.min.js"></script>
-   <script src="<?= URL ?>calendar2/js/fullcalendar.min.js"></script>
-   <script src="<?= URL ?>calendar2/js/jquery-ui.custom.min.js"></script>
-   <script src='<?= URL ?>calendar2/js/fr.js'></script>
+   <script src="<?= URL ?>calendar/js/jquery.js"></script>
+   <script src="<?= URL ?>calendar/js/bootstrap.min.js"></script>
+   <script src="<?= URL ?>calendar/js/moment.min.js"></script>
+   <script src="<?= URL ?>calendar/js/fullcalendar.min.js"></script>
+   <script src="<?= URL ?>calendar/js/jquery-ui.custom.min.js"></script>
+   <script src='<?= URL ?>calendar/js/fr.js'></script>
 
 
    <script>
@@ -323,7 +317,7 @@ $events = $req->fetchAll();
 
         //Apply changes
         $.ajax({
-         url: 'calendar2/editEventDate.php',
+         url: 'calendar/editEventDate.php',
          type: "POST",
          data: {Event:Event},
          success: function(rep) {
@@ -340,11 +334,7 @@ $events = $req->fetchAll();
 
    </script>
 
-<!-- </?
-// clean up memory
-$html->clear();
-include 'views/partials/footer.php';
-?> -->
+<?include 'views/partials/footer.php';?>
 
 </body>
 </html>
