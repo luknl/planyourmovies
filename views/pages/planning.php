@@ -15,18 +15,19 @@ $events = $req->fetchAll();
    <head>
       <meta charset="utf-8">
 			<title><?= $title?></title>
-			<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
+			
 			<link rel="stylesheet" href="<?= URL ?>src/css/calendar.css">
          <link href="<?= URL ?>calendar/css/bootstrap.min.css" rel="stylesheet">
      	<link href="<?= URL ?>calendar/css/fullcalendar.css" rel="stylesheet" />
+      <link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 </head>
 <body>
 
 	   <?include 'views/partials/header.php';?>
 
-	<div id='wrap'>
+	<div id='wrap' class="main-content" >
 
-		<div id='external-events'>
+		<div id='external-events' class="external">
 			<h4>Upcoming movies</h4>
 
 			<?
@@ -169,6 +170,7 @@ $events = $req->fetchAll();
    <script src="<?= URL ?>calendar/js/fullcalendar.min.js"></script>
    <script src="<?= URL ?>calendar/js/jquery-ui.custom.min.js"></script>
    <script src='<?= URL ?>calendar/js/fr.js'></script>
+   <script src="src/js/app/script.js"></script>
 
 
    <script>
@@ -200,7 +202,7 @@ $events = $req->fetchAll();
            center: 'title',
            right: 'month,basicWeek,basicDay'
         },
-        defaultDate: '2016-01-12',
+        defaultDate: '2016-04-15',
         editable: true,
         droppable: true,
         eventLimit: true, // allow "more" link when too many events
@@ -335,6 +337,5 @@ $events = $req->fetchAll();
    </script>
 
 <?include 'views/partials/footer.php';?>
-
 </body>
 </html>
