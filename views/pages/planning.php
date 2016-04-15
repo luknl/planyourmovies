@@ -21,7 +21,7 @@ $events = $req->fetchAll();
      	<link href="<?= URL ?>calendar2/css/fullcalendar.css" rel="stylesheet" />
 </head>
 <body>
-   
+
 	   <?include 'views/partials/header.php';?>
 
 	<div id='wrap'>
@@ -220,7 +220,7 @@ $events = $req->fetchAll();
                 $(this).remove();
            }
         },
-        //create event when dragging from external-events div//
+        //create event when dragging from external-events div
         eventDragStop: function( event, jsEvent, ui, view ) {
 
            if(isEventOverDiv(jsEvent.clientX, jsEvent.clientY)) {
@@ -231,11 +231,11 @@ $events = $req->fetchAll();
                   revert: true,
                   revertDuration: 0
                 });
-                el.data('event', { title: event.title, id :event.id, stick: true });
-                console.log(event.title);
-                console.log(event.id);
+                el.data('event', { title: event.title, id: event.id, stick: true });
            }
         },
+
+        //Events initiliasation & display w/ sql refresh
         select: function(start, end) {
 
            $('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
@@ -305,7 +305,7 @@ $events = $req->fetchAll();
 
              }
 
-
+             // Edit/delete event
      function edit(event){
         start = event.start.format('YYYY-MM-DD HH:mm:ss');
         if(event.end){
@@ -321,6 +321,7 @@ $events = $req->fetchAll();
         Event[1] = start;
         Event[2] = end;
 
+        //Apply changes
         $.ajax({
          url: 'calendar2/editEventDate.php',
          type: "POST",
