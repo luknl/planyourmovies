@@ -429,6 +429,9 @@ footer a:hover{
 	color: #bdc3c7;
 	transition: all ease-out 0.3s;
 }
+footer img{
+	margin-top: -10px;
+}
 .footer-left{
 	float: left;
 	width: 30%;
