@@ -2,13 +2,13 @@
 <html>
    <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       <?include_once 'config/config.php';?>
       <title><?= $title?></title>
       <link rel="stylesheet" href="<?= URL ?>src/css/style.css">
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
    </head>
    <body>
-   <div class="main-content">
    <?
          $keyword = str_replace(' ', '+',$_GET['the_search']);
 
@@ -17,6 +17,7 @@
 
    include 'views/partials/header.php';
 
+   ?><div class="main-content" style="background: white;"><?
    foreach($result->results as $movie) { ?>
    <div style="display:inline-block;padding-left:100px;">
    <a href="<?= URL ?>movie?id=<? echo($movie->id) ?>">
@@ -24,11 +25,12 @@
          <p style="max-width:200px;"><?php echo $movie->original_title ?></p>
          </a>
    </div>
-   </div>
-  <?php }
+  <?php }?>
+  </div>
+
+   <?include 'views/partials/footer.php';?>
 
 
-   include 'views/partials/footer.php';?>
    <script src="<?= URL ?>src/js/libs/jquery-2.2.0.min.js"></script>
    <script src="<?= URL ?>src/js/app/script.js"></script>
 </body>

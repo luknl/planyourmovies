@@ -9,6 +9,7 @@ body {
 	font-size: 15px;
 	margin:0;
 	padding:0;
+	background: #54CBC7;
 }
 a{
 	text-decoration: none;
@@ -179,13 +180,18 @@ li{
 }
 .today{
 	background: #54CBC7;
-	padding-top: 80px;
 }
 .today h2{
 	color: white;
 }
 .today .owl-next, .today .owl-prev{
 
+}
+.today .week{
+	padding-top: 0;
+}
+.populaire{
+	background: white;
 }
 .populaire .owl-next{
 	background: url("../img/next.svg") no-repeat;
@@ -224,6 +230,7 @@ li{
     padding-bottom: 30px;
     transition: all ease-out 0.3s;
     cursor: pointer;
+    color: white;
 }
 .left-bar li:hover{
 	background: #8adbd8;
@@ -245,6 +252,7 @@ li{
 .main-content{
 	transition: all ease-out 0.3s;
 	width: 100%;
+	padding-top: 130px;
 }
 .container-movie.toggled{
 	width: 83%;
@@ -255,6 +263,7 @@ li{
 	transition: all ease-out 0.3s;
 	width: 100%;
 	position: relative;
+	background: white;
 }
 .my-plan .menu-burgeurs-toggled{
 	display: none;
@@ -295,6 +304,7 @@ li{
 	width: 70%;
 	height: 100px;
 	display: inline-block;
+	float: right;
 }
 .search-bar input{
     background: none;
@@ -511,7 +521,7 @@ footer a:hover{
 .container{
 	text-align: center;
 	color: #bdc3c7;
-	height: 80%;
+	height: 90%;
 	width: 100%
 }
 .signup-contain{
@@ -626,10 +636,13 @@ footer a:hover{
 }
 @media only screen and (max-width: 1024px){
 	.logo{
-		margin-left: 19px;
+		margin-left: 140px;
 	}
 	.owl-item{
 		margin-right: -260px;
+	}
+	.search-bar{
+		width: 60%;
 	}
 }
 @media only screen and (max-width: 768px){
@@ -640,14 +653,14 @@ footer a:hover{
 		width: 20%;
 	}
 	.search-bar input{
-		width: 40%;
+		width: 50%;
 	}
 	.search-bar{
-		width: 40%;
+		width: 50%;
 		margin-left: 0px;
 	}
 	.my-plan{
-		margin-left: 41px;
+		
 	}
 	.owl-carousel.owl-loaded {
     	width: 100%;
@@ -662,9 +675,11 @@ footer a:hover{
 	}
 	.owl-next{
 		right: 20px;
+		display: none;
 	}
 	.owl-prev{
 		left: 20px;
+		display: none;
 	}
 	.left-content img{
 		margin-top: 50px;
@@ -672,11 +687,12 @@ footer a:hover{
 	.owl-prev{
 		margin-top: 10px;
 		margin-bottom: 0px;
+		display: none;
 	}
 	.owl-next{
-
 		margin-top: 10px;
 		margin-bottom: 0px;
+		display: none;
 	}
 	.owl-carousel .owl-stage-outer {
     	height: 340px;
@@ -688,8 +704,32 @@ footer a:hover{
 	footer{
 		margin-top: 100px;
 	}
+	.owl-nav{
+		display: none;
+	}
+
+}
+@media only screen and (max-width: 605px){
+	.logo{
+		display: none;
+	}
+	.my-plan{
+		margin-top: -11px;
+	}
+	.search-bar {
+    	width: 60%;
+	}
 }
 @media only screen and (max-width: 470px){
+	.left-bar.toggled{
+		width: 100%;
+	}
+	.main-content.toggled{
+		width: 0%;
+	}
+	.container-movie.toggled{
+		width: 0%;
+	}
 	.footer-right, .footer-center, .footer-left{
 		width: 100%;
 		display: block;

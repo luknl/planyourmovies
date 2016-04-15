@@ -28,9 +28,9 @@
 </div>
 <div class="left-bar">
    <ul>
-      <li>Connection</li>
-      <li>Inscription</li>
-      <li>Calendrier</li>
+      <a href="<?= URL?>login"><li>Connection</li></a>
+      <a href="<?= URL?>signup"><li>Inscription</li></a>
+      <a href="<?= URL?>planning"><li>Calendrier</li></a>
    </ul>
 </div>
 

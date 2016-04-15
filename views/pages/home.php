@@ -132,19 +132,27 @@ $('.owl-carousel').owlCarousel({
     responsive:{
         0:{
             items:1,
-            margin:-250
+            margin:-200
         },
         370:{
             items:2,
-            margin:-270
+            margin:-200
         },
         470:{
             items:2,
-            margin:-260
+            margin:-50
+        },
+        547:{
+            items:2,
+            margin:-100
+        },
+        647:{
+            items:2,
+            margin:-200
         },
         768:{
             items:2,
-            margin:-260
+            margin:-200
         },
         1024:{
             items:4
