@@ -18,8 +18,6 @@
 	<form action="#" method="post" class="signup-contain">
 	<h1>Inscription</h1>
 
-	<a href="<?= URL ?>login">Login</a>
-
 		<div>
 			<input type="email" name="email" placeholder="Email" class="email">
 		</div>
@@ -33,8 +31,8 @@
 		</div>
 
 
-		<div> Avez-vous une préférence entre : </div>
-			<br>
+		<div style="color: white;"> Avez-vous une préférence entre : </div>
+		
 		<div class="preference">
 				<input type="radio" name="language" id="language" value="VO" <?= $language == 'VO' ? 'checked' : '' ?> ><label for="language"> VO</label>
 
@@ -48,7 +46,7 @@
 		</div>
 		<div class="preference">
 
-				<input type="radio" name="type" for="type" value="3D" <?= $type == '3D' ? 'checked' : '' ?> ><label for="type"> 3D</label>
+				<input type="radio" name="type" id="type" value="3D" <?= $type == '3D' ? 'checked' : '' ?> ><label for="type"> 3D</label>
 
 
 
@@ -85,5 +83,7 @@
 	</div>
 
 	<?include 'views/partials/footer.php';?>
+	<script src="src/js/libs/jquery-2.2.0.min.js"></script>
+	<script src="src/js/app/script.js"></script>
 	</body>
 	</html>

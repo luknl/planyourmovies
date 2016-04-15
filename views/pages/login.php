@@ -118,7 +118,7 @@
 		<div>
 			<input type="submit" value="Se connecter" class="submit">
 		</div>
-
+			<br>
 			<a class="submit1" href="<?= URL ?>signup">Inscription</a>
 		
 
