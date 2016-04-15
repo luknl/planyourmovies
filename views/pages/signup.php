@@ -15,7 +15,6 @@
 
 <div class="container">
 
-
 	<form action="#" method="post" class="signup-contain">
 	<h1>Inscription</h1>
 

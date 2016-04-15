@@ -2,10 +2,10 @@
 
 require_once('bdd.php');
 if (isset($_POST['delete']) && isset($_POST['id'])){
-	
-	
+
+
 	$id = $_POST['id'];
-	
+
 	$sql = "DELETE FROM events WHERE id = $id";
 	$query = $bdd->prepare( $sql );
 	if ($query == false) {
@@ -17,16 +17,16 @@ if (isset($_POST['delete']) && isset($_POST['id'])){
 	 print_r($query->errorInfo());
 	 die ('Erreur execute');
 	}
-	
+
 }elseif (isset($_POST['title']) && isset($_POST['color']) && isset($_POST['id'])){
-	
+
 	$id = $_POST['id'];
 	$title = $_POST['title'];
 	$color = $_POST['color'];
-	
+
 	$sql = "UPDATE events SET  title = '$title', color = '$color' WHERE id = $id ";
 
-	
+
 	$query = $bdd->prepare( $sql );
 	if ($query == false) {
 	 print_r($bdd->errorInfo());
@@ -39,7 +39,7 @@ if (isset($_POST['delete']) && isset($_POST['id'])){
 	}
 
 }
-header('Location: index.php');
+header('Location: '.$_SERVER['HTTP_REFERER']);
 
-	
+
 ?>
