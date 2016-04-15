@@ -96,10 +96,10 @@
 
 <div class="container">
 
-	<h1>Login</h1>
-	<a href="<?= URL ?>signup">Inscription</a>
+	
 
 	<form action="#" method="post" class="signup-contain">
+	<h1>Login</h1>
 
 		<div>
 			<input type="email" name="email" placeholder="Email" class="email">
@@ -118,6 +118,10 @@
 		<div>
 			<input type="submit" value="Se connecter" class="submit">
 		</div>
+
+			<a class="submit1" href="<?= URL ?>signup">Inscription</a>
+		
+
 
 	</form>
 
