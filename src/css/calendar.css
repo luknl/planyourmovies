@@ -18,6 +18,9 @@ h2 a:hover {
 #wrap.toggled{
    width: 80%;
 }
+#wrap.toggled #external-events{
+   width: 0%;
+}
 
 #external-events {
    float: left;

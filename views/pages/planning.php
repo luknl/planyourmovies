@@ -175,6 +175,7 @@ $events = $req->fetchAll();
 
 
    <script>
+  
 
    $(document).ready(function() {
 

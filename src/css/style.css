@@ -15,6 +15,9 @@ a{
 	text-decoration: none;
 	color: none;
 }
+a:hover{
+	text-decoration: none;
+}
 
 h2 a {
 	text-decoration: none;
@@ -220,6 +223,7 @@ li{
 	color: white;
 	transition: all ease-out 0.3s;
 	box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.5);
+	z-index: 2;
 }
 .left-bar ul{
 	margin-top: 150px;
@@ -276,10 +280,12 @@ li{
 .my-plan.toggled .menu-burger{
 	display: none;
 }
-#wrapp{
+#wrap{
 	width: 100%;
 }
-
+#wrap.toggled{
+	width: 0%;
+}
 /* Fin Left-bar et toggle */
 
 
@@ -670,7 +676,7 @@ footer img{
 .fc th, .fc td{
 	background: white;
 }
-.fc-month-button, .fc-basicWeek-button, .fc-basicDay-button, .fc-today-button{
+.fc-month-button, .fc-basicWeek-button, .fc-basicDay-button, .fc-today-button, .fc-prev-button, .fc-next-button{
 	background: none;
     border: thin solid white;
     color: white;
