@@ -18,6 +18,7 @@
 </div>
 <div class="left-bar">
    <ul>
+   	<a href="<?= URL?>"><li>Home</li></a>
       <a href="<?= URL?>login"><li>Connection</li></a>
       <a href="<?= URL?>signup"><li>Inscription</li></a>
       <a href="<?= URL?>planning"><li>Calendrier</li></a>
