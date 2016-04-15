@@ -29,7 +29,7 @@ $events = $req->fetchAll();
 	<div id='wrap' class="main-content" >
 
 		<div id='external-events' class="external">
-			<h4>Upcoming movies</h4>
+			<h4>Sorties à venir</h4>
 
 			<?
 
@@ -44,7 +44,7 @@ $events = $req->fetchAll();
 
 			<p>
 				<input type='checkbox' id='drop-remove' />
-				<label for='drop-remove'>remove after drop</label>
+				<label for='drop-remove'>supprimer après drop</label>
 			</p>
 		</div>
 

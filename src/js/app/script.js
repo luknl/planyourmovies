@@ -7,5 +7,6 @@ $( ".my-plan" ).click(function(e) {
   $(".main-content").toggleClass( "toggled" );
   $(".my-plan").toggleClass( "toggled" );
   $(".container-movie").toggleClass( "toggled" );
+  $("#wrap").toggleClass( "toggled" );
 });
 

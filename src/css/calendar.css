@@ -10,30 +10,47 @@ h2 a:hover {
 /*Calendar*/
 
 #wrap {
-   width: 90%;
+   width: 100%;
    margin: 0 auto;
    font-size: 14px;
    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+#wrap.toggled{
+   width: 80%;
 }
 
 #external-events {
    float: left;
    width: 150px;
    padding: 0 10px;
-   border: 1px solid #ccc;
-   background: #eee;
+   background: none;
    text-align: left;
+   margin-left: 5%;
+   text-align: center;
+   color: white;
+
 }
 
 #external-events h4 {
    font-size: 16px;
    margin-top: 0;
    padding-top: 1em;
+
 }
 
 #external-events .fc-event {
    margin: 10px 0;
    cursor: pointer;
+   background: white;
+   border: none;
+   color: #bdc3c7;
+   transition: all ease-out 0.3s;
+   border-radius: none;
+}
+#external-events .fc-event:hover {
+    color: #54CBC7;
+    transition: all ease-out 0.3s;
+    transform: scale(1.05,1.05);
 }
 
 #external-events p {
@@ -50,4 +67,5 @@ h2 a:hover {
 #calendar {
    float: right;
    width: 900px;
+   margin-right: 5%;
 }

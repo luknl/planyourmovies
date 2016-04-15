@@ -276,6 +276,9 @@ li{
 .my-plan.toggled .menu-burger{
 	display: none;
 }
+#wrapp{
+	width: 100%;
+}
 
 /* Fin Left-bar et toggle */
 
@@ -675,6 +678,10 @@ footer img{
 .fc-state-active{
 	background: white;
 	color: #bdc3c7;
+	z-index: 3;
+}
+.fc-center{
+	color: white;
 }
 /* fin calendrier*/
 
