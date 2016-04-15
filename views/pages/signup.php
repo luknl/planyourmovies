@@ -7,6 +7,7 @@
 
 		      <title><?= $title?></title>
 		      <link rel="stylesheet" href="<?= URL ?>src/css/style.css">
+	         <link rel="icon" type="image/ico" href="<?= URL ?>src/img/favicon.ico" alt="favicon" />
 		   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		   </head>
 		   <body>
@@ -32,7 +33,7 @@
 
 
 		<div style="color: white;"> Avez-vous une préférence entre : </div>
-		
+
 		<div class="preference">
 				<input type="radio" name="language" id="language" value="VO" <?= $language == 'VO' ? 'checked' : '' ?> ><label for="language"> VO</label>
 

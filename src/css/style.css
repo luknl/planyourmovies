@@ -157,7 +157,7 @@ li{
 	margin-left: 5%;
 	margin-right: 5%;
 	padding-top: 30px;
-	
+
 	height: 460px;
 }
 .week-date{
@@ -313,7 +313,7 @@ li{
     width: 60%;
     height: 100px;
     border: none;
-    font-size: 91px;
+    font-size: 51px;
     position: absolute;
     color: #bdc3c7;
     transition: all ease-out 0.3s;
@@ -690,7 +690,7 @@ footer img{
 		margin-left: 0px;
 	}
 	.my-plan{
-		
+
 	}
 	.owl-carousel.owl-loaded {
     	width: 100%;

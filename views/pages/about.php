@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <title><?= $title?></title>
       <link rel="stylesheet" href="<?= URL ?>src/css/style.css">
+      <link rel="icon" type="image/ico" href="<?= URL ?>src/img/favicon.ico" alt="favicon" />
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
    </head>
    <body>

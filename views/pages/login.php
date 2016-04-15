@@ -88,6 +88,7 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 		      <title><?= $title?></title>
 		      <link rel="stylesheet" href="<?= URL ?>src/css/style.css">
+	         <link rel="icon" type="image/ico" href="<?= URL ?>src/img/favicon.ico" alt="favicon" />
 		   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		   </head>
 		   <body>
@@ -96,7 +97,7 @@
 
 <div class="container">
 
-	
+
 
 	<form action="#" method="post" class="signup-contain">
 	<h1>Login</h1>
@@ -120,7 +121,7 @@
 		</div>
 			<br>
 			<a class="submit1" href="<?= URL ?>signup">Inscription</a>
-		
+
 
 
 	</form>

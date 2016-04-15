@@ -17,6 +17,7 @@ $events = $req->fetchAll();
 			<title><?= $title?></title>
 			<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 			<link rel="stylesheet" href="<?= URL ?>src/css/calendar.css">
+         <link rel="icon" type="image/ico" href="<?= URL ?>src/img/favicon.ico" alt="favicon" />
          <link href="<?= URL ?>calendar/css/bootstrap.min.css" rel="stylesheet">
      	<link href="<?= URL ?>calendar/css/fullcalendar.css" rel="stylesheet" />
 </head>
