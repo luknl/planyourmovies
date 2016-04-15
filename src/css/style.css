@@ -659,6 +659,25 @@ footer img{
 
 /* fin sign up*/
 
+/* Calendrier*/
+
+.external{
+	background: blue;
+}
+.fc th, .fc td{
+	background: white;
+}
+.fc-month-button, .fc-basicWeek-button, .fc-basicDay-button, .fc-today-button{
+	background: none;
+    border: thin solid white;
+    color: white;
+}
+.fc-state-active{
+	background: white;
+	color: #bdc3c7;
+}
+/* fin calendrier*/
+
 /* Responsiv */
 
 @media only screen and (max-width: 1440px){
