@@ -8,7 +8,7 @@
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
    </head>
    <body>
-
+   <div class="main-content">
    <?
          $keyword = str_replace(' ', '+',$_GET['the_search']);
 
@@ -19,10 +19,14 @@
 
    foreach($result->results as $movie) { ?>
    <div style="display:inline-block;padding-left:100px;">
+   <a href="<?= URL ?>movie?id=<? echo($movie->id) ?>">
       <img src="http://image.tmdb.org/t/p/w500<?echo($movie->poster_path);?>" alt="<? echo($movie->title);?> movie poster" title="<? echo($movie->title);?> movie poster" style="width:200px;"/>
          <p style="max-width:200px;"><?php echo $movie->original_title ?></p>
+         </a>
+   </div>
    </div>
   <?php }
+
 
    include 'views/partials/footer.php';?>
    <script src="<?= URL ?>src/js/libs/jquery-2.2.0.min.js"></script>
