@@ -16,7 +16,7 @@
     </div>
     <div class="search-bar">
         <form action="<?= URL ?>search">
-            <input type="search" name="the_search" placeholder="rechercher...">
+            <input type="search" name="the_search" placeholder="Rechercher...">
         </form>
     </div>
 </div>
